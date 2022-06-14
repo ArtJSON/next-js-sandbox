@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 function ClientProjectIdPage() {
   const router = useRouter();
@@ -8,6 +9,7 @@ function ClientProjectIdPage() {
   return (
     <div>
       <h1>Project {router.query.clientprojectid}</h1>
+      <Link href="/">Main page</Link>
     </div>
   );
 }
