@@ -1,3 +1,5 @@
+import EventList from "../../components/events/eventList";
+
 function eventsIndexPage() {
   return (
     <div>
