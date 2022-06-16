@@ -1,9 +1,20 @@
-function detailsPage() {
+import { useState, useEffect } from "react";
+import { getEventById } from "../../dummyData";
+import { useRouter } from "next/router";
+
+function DetailsPage() {
+  const router = useRouter();
+  const event = getEventById(router.query.eventid);
+
+  if (!event) {
+    return <h1>Event not found</h1>;
+  }
+
   return (
     <div>
-      <h1>Detais for specific event:</h1>
+      <h1>{event.title}</h1>
     </div>
   );
 }
 
-export default detailsPage;
+export default DetailsPage;
